@@ -1,2 +1,6 @@
 login-manager
 .config/loginmanager
+.config/fisherman
+.config/dotfiles
+.config/fish/fishline
+.config/fish/fishfile
