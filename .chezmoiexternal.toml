@@ -1,0 +1,5 @@
+[".config/fish/functions"]
+    type = "git-repo"
+    url = "https://github.com/pkpowell/fish-functions.git"
+    ref = "master"
+    exact = true
