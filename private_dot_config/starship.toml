@@ -15,7 +15,7 @@ $character
 command_timeout = 1000
 
 [character]
-success_symbol = "[~>](green)"  
+success_symbol = "[->](green)"  
 
 # Disable the package module
 [package]
