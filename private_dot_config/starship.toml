@@ -55,8 +55,8 @@ style = "gray"
 disabled = false
 # format = "via [🏎💨 $version](cyan) "
 
-[jujutsu]
-template = "change_id.shortest(6) + ' ' + description.first_line()"
+#[jujutsu]
+#template = "change_id.shortest(6) + ' ' + description.first_line()"
 
 [nodejs]
 disabled = true
