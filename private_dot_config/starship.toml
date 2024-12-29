@@ -12,6 +12,10 @@ $git_status\
 $character
 """
 
+right_format = """
+$time
+"""
+
 command_timeout = 1000
 
 [character]
@@ -24,29 +28,37 @@ disabled = true
 [git_branch]
 # truncation_length = 4
 # truncation_symbol = ""
-format = "[$symbol$branch](regular black) "
+format = "[$symbol$branch](gray) "
+
+#[git_commit]
+#commit_hash_length = 4
+#tag_symbol = "🔖 "
+#tag_disabled = false
+#format = '[\($hash$tag\)]($style) '
+#style = "gray"
 
 [git_commit]
 commit_hash_length = 4
-tag_symbol = "🔖 "
+tag_symbol = '🔖 '
 
 [git_state]
-format = '[\($state( $progress_current of $progress_total)\)](regular black) '
+format = '[\($state( $progress_current of $progress_total)\)](gray) '
 # cherry_pick = "[🍒 PICKING](red)"
 
 [git_status]
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
+style = "gray"
 
 [golang]
-disabled = true
+disabled = false
 # format = "via [🏎💨 $version](cyan) "
 
-[nodejs]
-disabled = true
+[jujutsu]
+template = "change_id.shortest(6) + ' ' + description.first_line()"
 
-[python]
+[nodejs]
 disabled = true
 
 [rust]
@@ -58,8 +70,8 @@ truncation_symbol = "…/"
 style =  "cyan"
 
 [hostname]
-ssh_only = true
-format =  "@[$hostname](black) "
+ssh_only = false
+format =  "@[$hostname](gray) "
 # trim_at = "."
 disabled = false
 
@@ -78,12 +90,12 @@ disabled = false
 show_always = true
 
 [localip]
-ssh_only = true
+ssh_only = false
 format = "[$localipv4](blue) "
 disabled = false
 
 [time]
-disabled = true
+disabled = false
 format = '[\[ $time \]]($style) '
 time_format = "%b %e %T"
 utc_time_offset = "local"
