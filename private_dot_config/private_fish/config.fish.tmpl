@@ -12,3 +12,7 @@ set -x VISUAL /volume1/bin/edit
 set -x VISUAL /usr/local/bin/edit
 
 {{- end }}
+
+if type -q mise
+    mise activate fish | source
+end
