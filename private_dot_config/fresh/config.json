@@ -1,0 +1,20 @@
+{
+  "file_explorer": {
+    "show_hidden": true,
+    "show_gitignored": true,
+    "width": "25"
+  },
+  "theme": "builtin://dark",
+  "keybindings": [
+    {
+      "key": "q",
+      "modifiers": ["ctrl"],
+      "action": "detach"
+    },
+    {
+      "key": "q",
+      "modifiers": ["ctrl", "alt"],
+      "action": "quit",
+    }
+   ]
+}
